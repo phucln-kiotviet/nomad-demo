@@ -55,3 +55,20 @@ nomad alloc status <alloc_id>
 ```
 nomad alloc logs <alloc_id>
 ```
+
+- Check config change:
+```
+nomad job plan example.nomad
+```
+
+- After that run, `-check-index` is output of command above:
+
+```
+nomad job run -check-index 21 example.nomad
+```
+
+- Neu ko the truy cap nomad ben trong vagrant check [here](https://developer.hashicorp.com/nomad/tutorials/get-started/get-started-ui#troubleshooting)
+    - Chay nomad dev agent voi `-bind 0.0.0.0`
+    - Co the port `4646` bi xung dot. Can check lai terminal se thay port duoc doi lai
+
+- 
